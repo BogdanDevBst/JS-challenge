@@ -29,7 +29,8 @@ main {
     }
 }
 
-textarea {
+area {
+    flex-direction: column;
     width: 500px;
     height: 150px;
     resize: none;

@@ -39,7 +39,11 @@ main p {
   font-size: 1em;
 }
 
-textarea {
+area {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 500px;
   height: 150px;
   resize: none;
