@@ -6,8 +6,9 @@
 }
 
 main {
+    background-color: black;
     padding: 8px 0;
-    background-color: whitesmoke;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -17,22 +18,37 @@ main {
     position: absolute;
 
     section h1, p {
-        margin: 20px;
+        margin: 15px;
     }
 
     h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     p {
         font-size: 1em;
+        padding-bottom: 20px;
     }
 }
 
-area {
-    flex-direction: column;
-    width: 500px;
-    height: 150px;
+#morse-code {
+    background-image: url(./pics/telegraph-157683170-5a6b4e028e1b6e003715cdb6.png);
+    width: 770px;
+    height: 500px;
     resize: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    
+    input {
+        background-color: rgba(0, 0, 0, 0.589);
+        border: solid 2px black;
+        width: 400px;
+        height: 100px;
+        text-align: center;
+        font-size: medium;
+        color: white;
+    }
 }
 
