@@ -58,7 +58,7 @@ main p {
 }
 
 #morse-code input {
-  background-color: rgba(0, 0, 0, 0.589);
+  background-color: rgba(0, 0, 0, 0.6);
   border: solid 2px black;
   width: 400px;
   height: 100px;

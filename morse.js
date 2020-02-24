@@ -35,14 +35,14 @@ const morseCode = {
     "7":"__...",
     "8":"___..",
     "9":"____.",
-    " ":"/"
+    " ":"       "
 };
 
 const translate = list => {
-    return list.split("").map(convertMorse).join(" ");
+    return list.split("").map(convertToMorse).join(" ");
 }
 
-const convertMorse = letter => {
+const convertToMorse = letter => {
     return morseCode[letter];
 }
 
