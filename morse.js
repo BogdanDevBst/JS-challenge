@@ -35,7 +35,21 @@ const morseCode = {
     "7":"__...",
     "8":"___..",
     "9":"____.",
-    " ":"       "
+    " ":"       ",
+    "&":".-...",
+    "'":".----.",
+    "@":".--.-.",
+    ")":"-.--.-",
+    "(":"-.--.",
+    ":":"---...",
+    ",":"--..--",
+    "=":"-...-",
+    "!":"-.-.--",
+    ".":".-.-.-",
+    "-":"-....-",
+    "+":".-.-.",
+    '"':".-..-.",
+    "?":"..--..",
 };
 
 const translate = list => {
@@ -47,9 +61,32 @@ const convertToMorse = letter => {
 }
 
 const writeOutput = () => {
-   let input = document.getElementById("input").value;
+    let input = document.getElementById("input").value.toLowerCase();
     document.getElementById("output").value = translate(input);
 }
 
 document.getElementById("submit").addEventListener("click", writeOutput);
 
+
+
+
+const changeToWords = morseLetter => {
+    return Object.keys(morseCode).find(key => morseCode[key] === morseLetter);
+}
+
+const translateInput = () => {
+    document.getElementById("output").innerHTML = "";
+    //split input separated by spaces into an array
+    const getInput = document.getElementById("input").value.toLowerCase().split(" ");
+    
+    //check to see if input is morse. If so run function to translate
+    if (getInput[0].includes(".") || (getInput.includes("_"))) {
+        const convertedMorse = getInput.map(changeToWords);
+        document.getElementById("output").innerHTML = convertedMorse.join("");
+    }
+    
+    else {
+        const changeToMorse = getInput.map(convertWord);
+        document.getElementById("output").innerHTML = changeToMorse.join("");
+    }
+}
