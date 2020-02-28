@@ -137,18 +137,3 @@ const writeOutput = () => {
 }
 
 document.getElementById("submit").addEventListener("click", writeOutput);
-
-
-
-// const translateInput = () => {
-//     document.getElementById("output").innerHTML = "";
-//     //split input separated by spaces into an array
-//     const getInput = document.getElementById("input").value.toLowerCase().split(" ");
-    
-    //check to see if input is morse. If so run function to translate
-    
-//     else {
-//         const changeToMorse = getInput.map(convertWord);
-//         document.getElementById("output").innerHTML = changeToMorse.join("");
-//     }
-// }
