@@ -35,21 +35,104 @@ const morseCode = {
     "7":"__...",
     "8":"___..",
     "9":"____.",
-    " ":"       "
+    " ":"       ",
+    "&":".-...",
+    "'":".----.",
+    "@":".--.-.",
+    ")":"-.--.-",
+    "(":"-.--.",
+    ":":"---...",
+    ",":"--..--",
+    "=":"-...-",
+    "!":"-.-.--",
+    ".":".-.-.-",
+    "-":"-....-",
+    "+":".-.-.",
+    '"':".-..-.",
+    "?":"..--..",
 };
 
-const translate = list => {
-    return list.split("").map(convertToMorse).join(" ");
+const englishCode = {
+    "._":"a",
+    "_...":"b",
+    "_._.":"c",
+    "_..":"d",
+    ".":"e",
+    ".._.":"f",
+    "__.":"g",
+    "....":"h",
+    "..":"i",
+    ".___":"j",
+    "_._":"k",
+    "._..":"l",
+    "__":"m",
+    "_.":"n",
+    "___":"o",
+    ".__.":"p",
+    "__._":"q",
+    "._.":"r",
+    "...":"s",
+    "_":"t",
+    ".._":"u",
+    "..._":"v",
+    ".__":"w",
+    "_.._":"x",
+    "_.__":"y",
+    "__..":"z",
+    "_____":"0",
+    ".____":"1",
+    "..___":"2",
+    "...__":"3",
+    "...._":"4",
+    ".....":"5",
+    "_....":"6",
+    "__...":"7",
+    "___..":"8",
+    "____.":"9",
+    "       ":" ",
+    ".-...":"&",
+    ".----.":"'",
+    ".--.-.":"@",
+    "-.--.-":")",
+    "-.--.":"(",
+    "---...":":",
+    "--..--":",",
+    "-...-":"=",
+    "-.-.--":"!",
+    ".-.-.-":".",
+    "-....-":"-",
+    ".-.-.":"+",
+    ".-..-.":'"',
+    "..--..":"?"
+};
+
+const translate = string => {
+
+    return string.split("").map(convertToMorse).join(" ");
 }
 
 const convertToMorse = letter => {
     return morseCode[letter];
 }
 
+// reverse mode
+
+const translateMorse = morse => {
+    return morse.split(" ").map(convertToEnglish).join("");
+}
+
+const convertToEnglish = word => {
+    return englishCode[word];
+}
+
 const writeOutput = () => {
-   let input = document.getElementById("input").value;
-    document.getElementById("output").value = translate(input);
+    let input = document.getElementById("input").value.toLowerCase();
+
+    if (input[0].includes(".") || (input.includes("_"))) {
+        document.getElementById("output").value = translateMorse(input);
+    } else {
+        document.getElementById("output").value = translate(input);
+    }
 }
 
 document.getElementById("submit").addEventListener("click", writeOutput);
-
