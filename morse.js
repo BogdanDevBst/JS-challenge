@@ -125,7 +125,6 @@ const convertToEnglish = word => {
     return englishCode[word];
 }
 
-
 const writeOutput = () => {
     let input = document.getElementById("input").value.toLowerCase();
 
