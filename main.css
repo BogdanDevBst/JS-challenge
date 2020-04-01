@@ -6,6 +6,12 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
 main {
   background-color: black;
   background-repeat: no-repeat;
@@ -45,7 +51,7 @@ main img {
 #morse-code {
   background-image: url(./pics/telegraph-157683170-5a6b4e028e1b6e003715cdb6.png);
   width: 800px;
-  height: 530px;
+  height: 500px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,6 +62,9 @@ main img {
           flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #morse-code .text {
