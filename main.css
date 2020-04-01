@@ -3,14 +3,14 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 main {
   background-color: black;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,20 +24,22 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-}
-
-main section h1, main p {
-  margin: 15px;
 }
 
 main h1 {
   font-size: 2em;
+  margin: 15px;
 }
 
 main p {
   font-size: 1em;
   padding-bottom: 20px;
+  margin: 15px;
+}
+
+main img {
+  width: 30vw;
+  height: auto;
 }
 
 #morse-code {
@@ -72,6 +74,7 @@ main p {
 #morse-code .text button {
   width: 60px;
   margin: 10px;
+  cursor: pointer;
 }
 
 #morse-code input {
