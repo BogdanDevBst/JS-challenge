@@ -44,7 +44,7 @@ main p {
 }
 
 main img {
-  width: 30vw;
+  width: 20vw;
   height: auto;
 }
 
@@ -60,7 +60,6 @@ main img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -89,7 +88,7 @@ main img {
 #morse-code input {
   background-color: rgba(0, 0, 0, 0.5);
   border: solid 2px rgba(0, 0, 0, 0.5);
-  width: 90%;
+  width: 80%;
   height: 40px;
   text-align: left;
   font-size: medium;

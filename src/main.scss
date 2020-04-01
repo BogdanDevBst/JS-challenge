@@ -33,7 +33,7 @@ main {
   }
 
   img {
-    width: 30vw;
+    width: 20vw;
     height: auto;
   }
 }
@@ -45,7 +45,6 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
 
@@ -64,7 +63,7 @@ main {
   input {
     background-color: rgba(0, 0, 0, 0.5);
     border: solid 2px rgba(0, 0, 0, 0.5);
-    width: 90%;
+    width: 80%;
     height: 40px;
     text-align: left;
     font-size: medium;
