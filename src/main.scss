@@ -39,9 +39,9 @@ main {
 }
 
 #morse-code {
-  background-image: url(./pics/telegraph-157683170-5a6b4e028e1b6e003715cdb6.png);
-  width: 800px;
-  height: 500px;
+  background-image: url(../pics/telegraph-157683170-5a6b4e028e1b6e003715cdb6.png);
+  width: 75vw;
+  height: 60vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -63,8 +63,8 @@ main {
 
   input {
     background-color: rgba(0, 0, 0, 0.5);
-    border: solid 2px black;
-    width: 500px;
+    border: solid 2px rgba(0, 0, 0, 0.5);
+    width: 90%;
     height: 40px;
     text-align: left;
     font-size: medium;
