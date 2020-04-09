@@ -20,8 +20,7 @@ Deployed via github pages.
 
 ## Built With
 
-HTML5 
-JavaScript ES6 
+HTML5, JavaScript and
 Sass 
 
 ## Authors
